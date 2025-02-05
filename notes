@@ -1,0 +1,29 @@
+class `list` - built in data type
+- sequence of elements in an ordered fashion at continous memory locations
+- it can have duplicate elements
+- mutable object
+- it can store elements of different data types
+- a list is ideal for storing homogenous elements
+
+class `tuple` - built in data type
+- sequence of elements in an ordered fashion at continous memory locations
+- it can have duplicate elements
+- it is ideal for storing heterogenous elements
+- immutable object
+- its very much like a readonly data structure
+
+class `set`- built in data type
+- does not allow duplicate elements
+- there is no order guaranteed for the elements in the set
+- mutable object
+
+
+class `dict` - built in data type
+- every element in the dictionary is a key-value pair
+- keys are unique. can be of any data type
+- values can be duplicate
+- mutable object
+- keys are immutable
+- values are mutable
+- its not ordered
+- internally it builds an index for the keys - it takes extra memory

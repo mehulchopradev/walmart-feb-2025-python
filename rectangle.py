@@ -4,6 +4,11 @@ def perimeter(length=3, breadth=2):
 def area(length, breadth):
   return length * breadth
 
+def stats(length, breadth):
+  p = perimeter(length=length, breadth=breadth)
+  a = area(length=length, breadth=breadth)
+  return (p, a)
+
 
 l = int(input('Enter length: ')) # str -> int
 b = int(input('Enter breadth: '))
@@ -30,3 +35,7 @@ print(perimeter()) # default values of 3 for the length and 2 for the breadth
 
 # perimeter with default length value and breadth passed by the user
 print(perimeter(breadth=1))
+
+t = stats(length=6, breadth=3)
+print(t[0])
+print(t[1])

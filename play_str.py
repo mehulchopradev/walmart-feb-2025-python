@@ -39,3 +39,6 @@ print(user_input.isnumeric())
 user_input = 'good'
 print(user_input.isnumeric())
 print(user_input.isalpha())
+
+print(msg_of_day.find('night'))
+print(msg_of_day.find('morning'))
