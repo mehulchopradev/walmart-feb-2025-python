@@ -1,4 +1,5 @@
 from lib.college.student import Student
+from lib.college.professor import Professor
 
 # 0
 print(Student.count)
@@ -58,3 +59,9 @@ print(s3.gender) '''
 
 # 3
 print(Student.count)
+
+
+p1 = Professor(name='Dr. Smith', gender='m', subjects=['Math', 'Physics', 'Chemistry'])
+print(p1.name)
+print(p1.subjects)
+print(p1.get_details())

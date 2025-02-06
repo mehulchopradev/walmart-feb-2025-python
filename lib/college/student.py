@@ -1,17 +1,21 @@
+from typing import Optional
+from .college_user import CollegeUser
+
 # module --> lib.college.student
 # every class in python is represented by a class object in memory
 # 1 class object per class
-class Student:
+class Student(CollegeUser):
   # class attribute
-  count = 0
+  count:int = 0
 
   # default __init__
 
   # constructor
-  def __init__(self, name=None, gender=None, roll=None, marks=None):
+
+  def __init__(self, name:Optional[str] = None, gender: Optional[str] = None, \
+               roll: Optional[int] = None, marks: Optional[int] = None):
     # self --> reference to the current object
-    self.name = name
-    self.gender = gender
+    super().__init__(name=name, gender=gender)
     self.roll = roll
     self.marks = marks
 
@@ -20,13 +24,20 @@ class Student:
     
 
   # instance (object) methods
-  def get_details(self):
+  # method overriding
+  def get_details(self) -> str:
     # self -> s1, s2
-    return 'Name: ' + self.name + '\nGender: ' + self.gender \
-      + '\nRoll: ' + str(self.roll) + '\nMarks: ' + str(self.marks)
+    ''' return 'Name: ' + self.name + '\nGender: ' + self.gender \
+      + '\nRoll: ' + str(self.roll) + '\nMarks: ' + str(self.marks)'''
+    # return 'Name: {0}\nGender: {1}\nRoll: {2}\nMarks: {3}'.format(self.name, self.gender, self.roll, self.marks)
+    return 'Name: {name}\nGender: {gender}\nRoll: {roll}\nMarks: {marks}'\
+      .format(name=self.name, roll=self.roll, gender=self.gender, marks=self.marks)
   
   # calculate grade
 
   # class methods
-  def new_instance(name=None, gender=None, roll=None, marks=None):
+  @classmethod
+  def new_instance(cls, name:Optional[str] = None, gender: Optional[str] = None, \
+               roll: Optional[int] = None, marks: Optional[int] = None) -> 'Student':
+    # cls --> class object
     return Student(name=name, gender=gender, roll=roll, marks=marks)

@@ -1,9 +1,11 @@
+from typing import List
+
 el = []
 print(el)
 print(type(el))
 
-cars = ['bmw', 'audi', 'toyota'] # homogenous data
-s1 = ['mehul', 10, 'm', 90] # hetrogenous data -- list is not ideal data structure for this
+cars:List[str] = ['bmw', 'audi', 'toyota'] # homogenous data
+s1 = ['mehul', 10, 'm', 90] # type: ignore # hetrogenous data -- list is not ideal data structure for this
 
 # looping
 for car in cars:
@@ -16,7 +18,12 @@ print(cars[-1])
 cars[-1] = 'kia'
 print(cars)
 
-marks = [4, 5, 6, 4, 3, 2, 10, 9, 3]
+fullname: str = 'mehul chopra'
+age:int = 10
+pi:float = 3.14
+is_lights_on:bool = True
+
+marks:List[int] = [4, 5, 6, 4, 3, 2, 10, 9, 3]
 # slicing
 l1 = marks[0:4] # marks[:4]
 print(l1)

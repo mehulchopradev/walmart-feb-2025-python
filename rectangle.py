@@ -1,30 +1,35 @@
-def perimeter(length=3, breadth=2):
+from typing import Tuple
+
+def perimeter(length:int=3, breadth:int=2) -> int:
   return 2 * (length + breadth)
 
-def area(length, breadth):
+def area(length:int, breadth:int) -> int:
   return length * breadth
 
-def stats(length, breadth):
+def stats(length:int, breadth:int) -> Tuple[int, int]:
   p = perimeter(length=length, breadth=breadth)
   a = area(length=length, breadth=breadth)
   return (p, a)
 
 
-l = int(input('Enter length: ')) # str -> int
-b = int(input('Enter breadth: '))
+print(perimeter(10, 5))
+
+
+''' l = int(input('Enter length: ')) # str -> int
+b = int(input('Enter breadth: ')) '''
 
 # positional parameters
 # p = perimeter(l, b)
 
 # named parameters
 # p = perimeter(length=l, breadth=b)
-p = perimeter(breadth=b, length=l)
+# p = perimeter(breadth=b, length=l)
 
-a = area(l, b)
+# a = area(l, b)
 
 # 28 -> '28'
 
-print('Perimeter is ' + str(p))
+''' print('Perimeter is ' + str(p))
 print('Area is ' + str(a))
 
 print(perimeter(10)) # default value of 2 for the breadth
@@ -38,4 +43,4 @@ print(perimeter(breadth=1))
 
 t = stats(length=6, breadth=3)
 print(t[0])
-print(t[1])
+print(t[1]) '''

@@ -1,4 +1,6 @@
-books = {'B001': ('Book 1', 900, 1000), 'B002': ('Book 2', 800, 2000)}
+from typing import Dict, Tuple
+
+books: Dict[str, Tuple[str, int, int]] = {'B001': ('Book 1', 900, 1000), 'B002': ('Book 2', 800, 2000)}
 print(books)
 print(type(books))
 
